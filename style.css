@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Croissant One', cursive;
+    src: url(https://fonts.googleapis.com/css2?family=Croissant+One&display=swap);
+}
+
+body,
+p {
+    margin: 0px;
+}
+
+/*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
+.progressionBar {
+    background-color: #fee257;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    font-family: 'Croissant One', cursive;
+    font-style: bold;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+/*-----------------------------------ZONE DE CLIC JARDIN-----------------------------------*/
+.garden {
+    padding: 0px;
+    display: block;
+    position: relative;
+}
+
+#imgBack {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flowerBox {
+    position: absolute;
+    bottom: 14%;
+    right: 0;
+    z-index: 1;
+    width: 90%;
+    height: 23%;
+}
+
+.flower {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 9%;
+}
