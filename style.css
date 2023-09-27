@@ -3,48 +3,231 @@
     src: url(https://fonts.googleapis.com/css2?family=Croissant+One&display=swap);
 }
 
-body,
-p {
+*{
     margin: 0px;
-}
-
-/*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
-.progressionBar {
-    background-color: #fee257;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    text-align: center;
-    font-family: 'Croissant One', cursive;
-    font-style: bold;
-    font-size: 1rem;
-    margin: 0px;
-}
-
-/*-----------------------------------ZONE DE CLIC JARDIN-----------------------------------*/
-.garden {
     padding: 0px;
-    display: block;
-    position: relative;
+    border: 0px;
+    box-sizing: border-box;
 }
 
-#imgBack {
-    width: 100%;
-    height: auto;
-    display: block;
+/*--------------------Version mobile---------------------*/
+
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
+    .progressionBar {
+        background-color: hsl(50, 99%, 67%);
+        font-family: 'Croissant One', cursive;
+        font-style: bold;
+        font-size: 1rem;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .progressionBar p {
+        text-align: center;
+    }
+
+    .now {
+        background-color: hsl(14, 99%, 67%);
+        height: 100%;
+        width: 20%;
+    }
+
+    /*-----------------------------------ZONE DE CLIC JARDIN-----------------------------------*/
+    .garden {
+        padding: 0px;
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 60vh;
+    }
+
+    #imgBack {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .flowerBox {
+        position: absolute;
+        bottom: 14%;
+        right: 0;
+        z-index: 1;
+        width: 90%;
+        height: 23%;
+    }
+
+    .flower {
+        position: absolute;
+        top: 20%;
+        right: 30%;
+        width: 9%;
+    }
+
+    /*------------------------------- ZONE DE GIFTS ------------------*/
+
+    .gifts {
+        width: 100vw;
+        height: 20vh;
+        background-color: hsl(192, 30%, 75%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 4fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+    }
+
+    #gift_1 {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+        box-shadow: 5px 5px 5px 5px hsl(42, 50%, 20%);
+    }
+
+    #arrowGifts_left {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #arrowGifts_right {
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #triangleButton_left {
+        height : 0;
+        width : 0;
+        border-right : 20px solid transparent;
+        border-bottom : 20px solid hsl(192, 30%, 30%);
+        border-left : 20px solid transparent;
+        transform: rotate(270deg);
+    }
+
+    #triangleButton_right {
+        height : 0;
+        width : 0;
+        border-right : 20px solid transparent;
+        border-bottom : 20px solid hsl(192, 30%, 30%);
+        border-left : 20px solid transparent;
+        transform: rotate(90deg);
+    }
+    /*------------------------------- ZONE DU MARKET ------------------*/
+
+    .market {
+        width: 100vw;
+        height: 20vh;
+        background-color: hsl(42, 96%, 80%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 2vw;
+        column-gap: 2vw;
+        padding: 0 2vw;
+    }
+
+    .permanentHelpers {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7%;
+
+    }
+
+    .helper {
+        box-shadow: 2px 2px 2px 2px hsl(192, 30%, 30%);
+        width: 100%;
+    }
+
+    .ponctualHelpers {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7%;
+    }
+
 }
 
-.flowerBox {
-    position: absolute;
-    bottom: 14%;
-    right: 0;
-    z-index: 1;
-    width: 90%;
-    height: 23%;
-}
+/*--------------------Version desktop---------------------*/
 
-.flower {
-    position: absolute;
-    top: 20%;
-    right: 30%;
-    width: 9%;
+@media (min-width: 768px) {
+
+    body {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
+    .progressionBar {
+        background-color: #fee257;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-family: 'Croissant One', cursive;
+        font-style: bold;
+        font-size: 1rem;
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .progressionBar p {
+        text-align: center;
+    }
+
+    /*-----------------------------------ZONE DE CLIC JARDIN-----------------------------------*/
+    .garden {
+        padding: 0px;
+        display: block;
+        position: relative;
+        width: 60vw;
+        height: 100vh;
+    }
+
+    #imgBack {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .flowerBox {
+        position: absolute;
+        bottom: 14%;
+        right: 0;
+        z-index: 1;
+        width: 90%;
+        height: 23%;
+    }
+
+    .flower {
+        position: absolute;
+        top: 20%;
+        right: 30%;
+        width: 9%;
+    }
+
+    /*------------------------------- ZONE DE GIFTS ------------------*/
+
+    .gifts {
+        width: 20vw;
+        height: 100vh;
+        background-color: blue;
+    }
+
+    .market {
+        width: 20vw;
+        height: 100vh;
+        background-color: rgb(91, 9, 77);
+    }
+
 }

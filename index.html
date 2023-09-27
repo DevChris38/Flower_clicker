@@ -10,8 +10,13 @@
 </head>
 
 <body>
-    <div class="gift">
+    <div class="gifts">
         <div id="gift_Title">
+        </div>
+
+        <!--La flèche sur laquelle on clique pour passer les items vers l'arriere en version mobile-->
+        <div id="arrowGifts_left">
+            <div id="triangleButton_left"></div>
         </div>
 
         <div id="gift_1">
@@ -29,20 +34,26 @@
         <div id="gift_5">
         </div>
 
-    </div>
-
-    <div class="progressionBar">
-
-        <p>0 / 100 000 pétales</p>
-        <div class="progressionBarNow">
-            <!-- ajouter un increment lié à un event clic, J'ai fais le css en mode 0, a y revenir après ou pendant la mise en place de l'event-->
+        <!--La flèche sur laquelle on clique pour passer les items vers l'avant en version mobile-->
+        <div id="arrowGifts_right">
+            <div id="triangleButton_right"></div>
         </div>
 
     </div>
 
     <div class="garden">
+
         <img id="imgBack" src="./assets/imgFond2.jpeg" alt="Illustration de collines herbeuses et ciel bleu" />
         <!--mettre l'event clic dans garden pour garder toute la zone "jardin clicable et avoir une zone d'apparition des fleurs plus reduite (ex que dans l'herbe)"-->
+        <div class="progressionBar">
+            <!--CA : J'ai mis la barre après l'image pour que la barre apparaisse par dessus l'image afin due l'image ne dépasse pas du bas de la page-->
+
+            <p>20 000 / 100 000 pétales</p>
+            <div class="progressionBar now">
+                <!-- ajouter un increment lié à un event clic, J'ai fais le css en mode 0, a y revenir après ou pendant la mise en place de l'event-->
+            </div>
+
+        </div>
         <div class="flowerBox">
             <!--mise en place des fleurs avec la mise en place de l'event d'apparition de fleurs avec clic et aléatoire-->
             <!--Mettre la zone d'apparition aléatoire en 100% dans Js, la zone dans le CSS est déjà délimité pour eviter d'eventuelles apparitions non désirées-->
@@ -57,22 +68,26 @@
         <div id="market-Title">
         </div>
 
-        <div id="helper_1">
+        <div class="permanentHelpers">
+            <div class="helper 1">
+            </div>
+
+            <div class="helper 2">
+            </div>
+
+            <div class="helper 3">
+            </div>
         </div>
 
-        <div id="helper_2">
-        </div>
+        <div class="ponctualHelpers">
+            <div class="helper 4">
+            </div>
 
-        <div id="helper_3">
-        </div>
+            <div class="helper 5">
+            </div>
 
-        <div id="helper_4">
-        </div>
-
-        <div id="helper_5">
-        </div>
-
-        <div id="helper_6">
+            <div class="helper 6">
+            </div>
         </div>
     </div>
     <!-- CREDIT POUR L'IMAGE DE FOND
