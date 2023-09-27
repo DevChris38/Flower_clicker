@@ -37,7 +37,7 @@
     .now {
         background-color: hsl(14, 99%, 67%);
         height: 100%;
-        width: 20%;
+        width: 10%;
     }
 
     /*-----------------------------------ZONE DE CLIC JARDIN-----------------------------------*/
@@ -86,6 +86,39 @@
         grid-column: 2 / span 2;
         grid-row: 2 / span 1;
         box-shadow: 5px 5px 5px 5px hsl(42, 50%, 20%);
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        visibility: hidden;
+    }
+
+    .imgContainer{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 5;
+        margin: auto;
+    }
+
+    #margueriteImg {
+        width: 100%;
+    }
+
+    #gift_1>h3 {    
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        text-align: center;
+    }
+
+    #margueriteCost {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        text-align: center;
+    }
+
+    #margueriteWiki {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 3;
+        font-size: 0.6em;
+        text-align: center;
     }
 
     #arrowGifts_left {
@@ -143,9 +176,36 @@
 
     }
 
-    .helper {
+    .helper_1 {
         box-shadow: 2px 2px 2px 2px hsl(192, 30%, 30%);
         width: 100%;
+        height: 30%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-color: black;
+    }
+
+    .helper>h3 {
+        font-size: 1rem;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        text-align: center;
+    }
+
+    #arrosoirCost {
+        font-size: 0.7rem;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        text-align: center;
+        margin: auto;
+    }
+
+    #arrosoirNumber {
+        font-size: 0.7rem;
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        text-align: center;
     }
 
     .ponctualHelpers {

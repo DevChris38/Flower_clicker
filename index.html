@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!--<script src="script.js"></script>-->
     <title>Flower clicker</title>
 </head>
 
@@ -20,6 +19,15 @@
         </div>
 
         <div id="gift_1">
+            <div class="imgContainer">
+                <img id="margueriteImg" src="./assets/flowersGift/marguerite.svg" />
+            </div>
+            <h3>Marguerite</h3>
+            <p id="margueriteCost">Coût = 150 pétales</p>
+            <p id="margueriteWiki">La Marguerite est une plante de la famille des Asteraceae. La marguerite possède des propriétés
+                antispasmodiques, calmantes, digestives et astringente.
+                Dans certaines régions elle faisait partie des herbes de la Saint-Jean. </p>
+
         </div>
 
         <div id="gift_2">
@@ -48,7 +56,7 @@
         <div class="progressionBar">
             <!--CA : J'ai mis la barre après l'image pour que la barre apparaisse par dessus l'image afin due l'image ne dépasse pas du bas de la page-->
 
-            <p>20 000 / 100 000 pétales</p>
+            <p>0 / 100 000 pétales</p>
             <div class="progressionBar now">
                 <!-- ajouter un increment lié à un event clic, J'ai fais le css en mode 0, a y revenir après ou pendant la mise en place de l'event-->
             </div>
@@ -69,30 +77,34 @@
         </div>
 
         <div class="permanentHelpers">
-            <div class="helper 1">
+            <div class="helper_1">
+                <h3>Arrosoir</h3>
+                <p id="arrosoirCost">Coût = 20 pétales</p>
+                <p id="arrosoirNumber">Vous n'avez pas d'arrosoir</p>
             </div>
 
-            <div class="helper 2">
+            <div class="helper_2">
             </div>
 
-            <div class="helper 3">
+            <div class="helper_3">
             </div>
         </div>
 
         <div class="ponctualHelpers">
-            <div class="helper 4">
+            <div class="helper_4">
             </div>
 
-            <div class="helper 5">
+            <div class="helper_5">
             </div>
 
-            <div class="helper 6">
+            <div class="helper_6">
             </div>
         </div>
     </div>
     <!-- CREDIT POUR L'IMAGE DE FOND
      <a href="https://fr.freepik.com/vecteurs-libre/paysage-printemps-dessine-main_6688436.htm#page=20&query=libre%20droits%20jardin&position=9&from_view=search&track=ais">Freepik</a>
 -->
+<script src="script.js"></script>
 </body>
 
 </html>
