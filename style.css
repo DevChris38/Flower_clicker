@@ -281,13 +281,74 @@
     .gifts {
         width: 20vw;
         height: 100vh;
-        background-color: blue;
+        background-color: hsl(192, 30%, 75%);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
     }
 
-    .market {
+    #gift_1, #gift_4, #gift_2, #gift_3, #gift_5 {
+        border: 1px solid black;
+        height: 116px;
+    }
+
+    #arrowGifts_left {
+        display: none;
+    }
+
+    div#gift_Title {
+        height: 116px;
+        border: 1px solid black;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 100%; 
+      }
+
+    h3 {
+        display: flex;
+        justify-content: right;
+      }
+
+    div.imgContainer {
+        width: 75px;
+      }
+
+      p#margueriteCost, p#arrosoirCost, p#arrosoirNumber {
+        display: flex;
+        justify-content: right;
+      }
+
+
+/* --------------------- ZONE DU MARKET ----------------------*/
+  .market {
         width: 20vw;
         height: 100vh;
-        background-color: rgb(91, 9, 77);
+        background-color: hsl(42, 96%, 80%);
+    }
+
+    .permanentHelpers {
+        height: 50%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .permanentHelpers>div {
+        border: 1px solid black;
+    }
+
+    .ponctualHelpers {
+        height: 50%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .ponctualHelpers>div {
+        border: 1px solid black;
     }
 
 }
