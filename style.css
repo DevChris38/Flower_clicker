@@ -3,11 +3,12 @@
     src: url(https://fonts.googleapis.com/css2?family=Croissant+One&display=swap);
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     border: 0px;
     box-sizing: border-box;
+    color: #3F2424;
 }
 
 /*--------------------Version mobile---------------------*/
@@ -77,83 +78,74 @@
         width: 100vw;
         height: 20vh;
         background-color: hsl(192, 30%, 75%);
-        display: grid;
-        grid-template-columns: 1fr 1fr 4fr 1fr;
-        grid-template-rows: 1fr 3fr 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    .menuGifts {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     #gift_1 {
-        grid-column: 2 / span 2;
-        grid-row: 2 / span 1;
-        box-shadow: 5px 5px 5px 5px hsl(42, 50%, 20%);
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        visibility: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        border: #fee257 1px solid;
+        box-shadow: 5px 5px 3px #9F9F9f;
+        margin-bottom: 1vh;
     }
 
-    .imgContainer{
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 5;
-        margin: auto;
+    .textGifts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemTitle,
+    #margueriteCost {
+        text-align: center;
+    }
+
+    #margueriteCost,
+    #margueriteWiki {
+        font-size: 2vh;
+    }
+
+    .imgContainer {
+        padding: 5px;
     }
 
     #margueriteImg {
-        width: 100%;
-    }
-
-    #gift_1>h3 {    
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
-        text-align: center;
-    }
-
-    #margueriteCost {
-        grid-column: 2 / span 1;
-        grid-row: 2 / span 1;
-        text-align: center;
-    }
-
-    #margueriteWiki {
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 3;
-        font-size: 0.6em;
-        text-align: center;
-    }
-
-    #arrowGifts_left {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #arrowGifts_right {
-        grid-column: 4 / span 1;
-        grid-row: 2 / span 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 10vh;
     }
 
     #triangleButton_left {
-        height : 0;
-        width : 0;
-        border-right : 20px solid transparent;
-        border-bottom : 20px solid hsl(192, 30%, 30%);
-        border-left : 20px solid transparent;
+        height: 0;
+        width: 0;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid hsl(192, 30%, 30%);
+        border-left: 20px solid transparent;
         transform: rotate(270deg);
     }
 
     #triangleButton_right {
-        height : 0;
-        width : 0;
-        border-right : 20px solid transparent;
-        border-bottom : 20px solid hsl(192, 30%, 30%);
-        border-left : 20px solid transparent;
+        height: 0;
+        width: 0;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid hsl(192, 30%, 30%);
+        border-left: 20px solid transparent;
         transform: rotate(90deg);
     }
+
     /*------------------------------- ZONE DU MARKET ------------------*/
 
     .market {
@@ -167,6 +159,10 @@
         padding: 0 2vw;
     }
 
+    #market-Title {
+        grid-column: 1 / span 2;
+    }
+
     .permanentHelpers {
         grid-column: 1 / span 1;
         grid-row: 2 / span 3;
@@ -177,43 +173,37 @@
     }
 
     .helper_1 {
-        box-shadow: 2px 2px 2px 2px hsl(192, 30%, 30%);
+        box-shadow: 2px 2px 2px #9F9F9f;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
         height: 30%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        background-color: black;
     }
 
-    .helper>h3 {
-        font-size: 1rem;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        text-align: center;
-    }
-
-    #arrosoirCost {
-        font-size: 0.7rem;
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
-        text-align: center;
-        margin: auto;
+    .itemHelper {
+        display: flex;
+        justify-content: space-around;
     }
 
     #arrosoirNumber {
-        font-size: 0.7rem;
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 1;
         text-align: center;
     }
 
-    .ponctualHelpers {
-        grid-column: 2 / span 1;
-        grid-row: 2 / span 3;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7%;
+    h3 {
+        font-size: 2vh;
+    }
+
+    h3,
+    #arrosoirCost {
+        padding-left: 0.5vh;
+        padding-right: 0.5vh;
+    }
+
+    #arrosoirCost,
+    #arrosoirNumber {
+        font-size: 1.5vh;
     }
 
 }
@@ -284,47 +274,55 @@
         background-color: hsl(192, 30%, 75%);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
 
-    #gift_1, #gift_4, #gift_2, #gift_3, #gift_5 {
-        border: 1px solid black;
+    #gift_1,
+    #gift_4,
+    #gift_2,
+    #gift_3,
+    #gift_5 {
+        border: 1px solid #3F2424;
         height: 116px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .textGifts {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
     }
 
     #arrowGifts_left {
         display: none;
     }
 
-    div#gift_Title {
+    #gift_Title {
         height: 116px;
-        border: 1px solid black;
+        border: 1px solid #3F2424;
     }
 
     h2 {
         display: flex;
         justify-content: center;
-        align-items: center; 
-        height: 100%; 
-      }
+        align-items: center;
+        height: 100%;
+    }
 
-    h3 {
+    itemTitle {
         display: flex;
         justify-content: right;
-      }
+    }
 
     div.imgContainer {
         width: 75px;
-      }
+    }
 
-      p#margueriteCost, p#arrosoirCost, p#arrosoirNumber {
-        display: flex;
-        justify-content: right;
-      }
-
-
-/* --------------------- ZONE DU MARKET ----------------------*/
-  .market {
+    /* --------------------- ZONE DU MARKET ----------------------*/
+    .market {
         width: 20vw;
         height: 100vh;
         background-color: hsl(42, 96%, 80%);
@@ -338,17 +336,11 @@
     }
 
     .permanentHelpers>div {
-        border: 1px solid black;
+        border: 1px solid #3F2424;
+        border-radius: 20px;
     }
 
-    .ponctualHelpers {
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    .helper_1 {
+        text-align: center;
     }
-    .ponctualHelpers>div {
-        border: 1px solid black;
-    }
-
 }
