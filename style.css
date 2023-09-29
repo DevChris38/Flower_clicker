@@ -218,6 +218,19 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------Version desktop---------------------*/
 
 @media (min-width: 768px) {
@@ -308,22 +321,50 @@
         height: 100%; 
       }
 
-    h3 {
+    #gift_1 h3 {
         display: flex;
-        justify-content: right;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 120px;
+        left: 120px;
       }
 
+    h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #margueriteCost {
+    position: absolute;
+    top: 140px;
+    LEFT: 100px;
+    }
+
+    p#margueriteWiki {
+    position: absolute;
+    left: 7%;
+    top: 24.5%;
+    font-size: small;
+}
+
+    span {
+        text-decoration: underline;
+    }
     div.imgContainer {
         width: 75px;
       }
 
-      p#margueriteCost, p#arrosoirCost, p#arrosoirNumber {
+    p#margueriteCost, p#arrosoirCost, p#arrosoirNumber {
         display: flex;
-        justify-content: right;
-      }
+        justify-content: space-evenly;
+    }
 
+    img#margueriteImg {
+        position: absolute;
+        top: 21%;
+    }
 
-/* --------------------- ZONE DU MARKET ----------------------*/
+    /* --------------------- ZONE DU MARKET ----------------------*/
   .market {
         width: 20vw;
         height: 100vh;
@@ -350,5 +391,5 @@
     .ponctualHelpers>div {
         border: 1px solid black;
     }
-
+    
 }
