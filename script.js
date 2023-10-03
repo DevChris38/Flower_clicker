@@ -18,6 +18,7 @@ let precedentTimeStamp = 0;
 let precedentTimeStampArrosoir = 0;
 
 
+
 // tableau d'objets pour définir les fleurs que l'on va gagner
 const giftsProps = [
     {
