@@ -17,6 +17,8 @@ let fini = false;
 let tempsPrecedent = 0;
 let lastClick = 0;
 let precedentTimeStamp = 0;
+let precedentTimeStampArrosoir = 0;
+
 
 
 // tableau d'objets pour définir les fleurs que l'on va gagner
@@ -104,11 +106,11 @@ function updateScore(chrono) {
     //Quand on a assez d'argent pour acheter l'arrosoir, permet de l'acheter et d'augmenter le gain de pétales
     arrosoir.addEventListener("click", (event) => {
         event.preventDefault();
-        if (actScore >= helpersProps[0].cost && lastClick < (chrono - 500)) {
+        if (actScore >= helpersProps[0].cost && event.timeStamp != precedentTimeStampArrosoir) {
             actScore -= helpersProps[0].cost;
             helpersProps[0].number++;
             petalesPerSeconds++;
-            lastClick = chrono;
+            precedentTimeStampArrosoir = event.timeStamp;
         }
         ;
     }
