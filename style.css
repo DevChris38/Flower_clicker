@@ -39,6 +39,22 @@ h2 {
         position: absolute;
         top: 0;
         width: 100%;
+        text-align: center;
+    }
+
+    #timer {
+        text-align: center;
+        padding-top: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 4vh;
+        width: 100%;
+        background-color: #fee257;
+        font-family: 'Croissant One', cursive;
+    }
+
+    .progressionBar p {
+        text-align: center;
     }
 
     .now {
@@ -58,7 +74,7 @@ h2 {
 
     #imgBack {
         width: 100%;
-        height: 100%;
+        height: 88%;
         display: block;
     }
 
@@ -236,6 +252,19 @@ h2 {
         position: absolute;
         top: 0;
         width: 100%;
+        text-align: center;
+        height: 4vh;
+    }
+
+    #timer {
+        text-align: center;
+        padding-top: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 4vh;
+        width: 100%;
+        background-color: #fee257;
+        font-family: 'Croissant One', cursive;
     }
 
     .progressionBar p {
@@ -248,7 +277,7 @@ h2 {
         display: block;
         position: relative;
         width: 60vw;
-        height: 100vh;
+        height: 92vh;
     }
 
     #imgBack {
@@ -278,6 +307,7 @@ h2 {
     .gifts {
         width: 20vw;
         background-color: hsl(192, 30%, 75%);
+        height: 100vh;
     }
 
     #gift_Title {
@@ -318,7 +348,7 @@ h2 {
     .market {
         width: 20vw;
         background-color: hsl(42, 96%, 80%);
-
+        height: 100vh;
     }
 
     #market-Title {

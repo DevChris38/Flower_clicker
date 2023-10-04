@@ -32,6 +32,8 @@ const tulipeNumber = document.querySelector('#tulipeNumber');
 const tulipeImg = document.querySelector('#tulipeBoxImg');
 const tulipeText = document.querySelector('#tulipeTextGifts');
 
+const timerElement = document.getElementById("timer")
+
 
 let debut;
 let fini = false;
@@ -39,6 +41,8 @@ let tempsPrecedent = 0;
 let lastClick = 0;
 let precedentTimeStamp = 0;
 let chrono = 0
+let precedentTimeStampArrosoir = 0;
+
 
 
 // tableau d'objets pour définir les fleurs que l'on va gagner
@@ -99,8 +103,14 @@ function updateScore(chrono) {
     if (debut === undefined) {
         debut = chrono;
     }
-
     const ecoule = chrono - debut;
+
+
+    let minutes = Math.floor(parseInt(chrono) / 60000);
+    let secondes = Math.floor((parseInt(chrono) % 60000) / 1000);
+
+    timerElement.innerText = `${minutes}:${secondes}`
+
 
     //console.log((chrono - tempsPrecedent) * petalesPerSeconds);
     actScore = actScore + ((chrono - tempsPrecedent) * petalesPerSeconds / 1000);
@@ -205,11 +215,11 @@ function updateScore(chrono) {
     //Quand on a assez d'argent pour acheter l'arrosoir, permet de l'acheter et d'augmenter le gain de pétales
     arrosoir.addEventListener("click", (event) => {
         event.preventDefault();
-        if (actScore >= helpersProps[0].cost && lastClick < (chrono - 500)) {
+        if (actScore >= helpersProps[0].cost && event.timeStamp != precedentTimeStampArrosoir) {
             actScore -= helpersProps[0].cost;
             helpersProps[0].number++;
             petalesPerSeconds++;
-            lastClick = chrono;
+            precedentTimeStampArrosoir = event.timeStamp;
         }
         ;
     }
