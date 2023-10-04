@@ -45,22 +45,22 @@ let chrono = 0
 const giftsProps = [
     {
         name: 'margueritte',
-        cost: 1,
+        cost: 150,
         number: 0
     },
     {
         name: 'tiare',
-        cost: 2,
+        cost: 300,
         number: 0
     },
     {
         name: 'cosmos',
-        cost: 3,
+        cost: 450,
         number: 0
     },
     {
         name: 'tulipe',
-        cost: 4,
+        cost: 600,
         number: 0
     }
 ]
@@ -69,22 +69,22 @@ const giftsProps = [
 const helpersProps = [
     {
         name: 'arrosoir',
-        cost: 5,
+        cost: 20,
         number: 0
     },
     {
         name: 'rateau',
-        cost: 6,
+        cost: 60,
         number: 0
     },
     {
         name: 'pelle',
-        cost: 7,
+        cost: 180,
         number: 0
     },
     {
         name: 'brouette',
-        cost: 8,
+        cost: 540,
         number: 0
     }
 ]
