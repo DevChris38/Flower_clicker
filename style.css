@@ -18,6 +18,8 @@
     body {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+
     }
 
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
@@ -108,12 +110,14 @@
     .textGifts {
         display: flex;
         flex-direction: column;
+        text-align: left;
     }
 
-    .itemTitle,
-    #margueriteCost {
-        text-align: center;
+
+    span {
+        text-decoration: underline;
     }
+
 
     #margueriteCost,
     #margueriteWiki {
@@ -168,8 +172,8 @@
         grid-row: 2 / span 3;
         display: flex;
         flex-wrap: wrap;
-        gap: 7%;
-
+        gap: 5%;
+        height: 35%;
     }
 
     .helper_1 {
@@ -179,26 +183,16 @@
         flex-direction: column;
         align-items: center;
         border-radius: 20px;
-        height: 30%;
     }
 
     .itemHelper {
         display: flex;
-        justify-content: space-around;
-    }
-
-    #arrosoirNumber {
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     h3 {
         font-size: 2vh;
-    }
-
-    h3,
-    #arrosoirCost {
-        padding-left: 0.5vh;
-        padding-right: 0.5vh;
     }
 
     #arrosoirCost,
@@ -207,18 +201,6 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*--------------------Version desktop---------------------*/
@@ -283,118 +265,67 @@
 
     .gifts {
         width: 20vw;
-        height: 100vh;
         background-color: hsl(192, 30%, 75%);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    #gift_1,
-    #gift_4,
-    #gift_2,
-    #gift_3,
-    #gift_5 {
-        border: 1px solid #3F2424;
-        height: 116px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 20px;
-    }
-
-    .textGifts {
-        display: flex;
-        flex-direction: column;
-        padding: 2em;
-    }
-
-    #arrowGifts_left {
-        display: none;
     }
 
     #gift_Title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 116px;
         border: 1px solid #3F2424;
     }
 
-    h2 {
+    .imgContainer,
+    .textGifts {
+        margin: 2%;
+    }
+
+    #gift_1 {
+        border: 1px solid #3F2424;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        height: 100%;
     }
 
-    #gift_1 h3 {
-        display: flex;
-        justify-content: space-evenly;
-        position: absolute;
-        top: 120px;
-        left: 120px;
-      }
-
-
-    h3 {
-        display: flex;
-        justify-content: center;
+    #arrowGifts_left,
+    #arrowGifts_right {
+        display: none;
     }
-
-    #margueriteCost {
-    position: absolute;
-    top: 140px;
-    LEFT: 100px;
-    }
-
-    p#margueriteWiki {
-    position: absolute;
-    left: 7%;
-    top: 24.5%;
-    font-size: small;
-}
 
     span {
         text-decoration: underline;
     }
-    div.imgContainer {
-        width: 75px;
-    }
-
-    p#margueriteCost, p#arrosoirCost, p#arrosoirNumber {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    img#margueriteImg {
-        position: absolute;
-        top: 21%;
-    }
 
     /* --------------------- ZONE DU MARKET ----------------------*/
-  .market {
-
+    .market {
         width: 20vw;
-        height: 100vh;
         background-color: hsl(42, 96%, 80%);
     }
 
-    .permanentHelpers {
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    #market-Title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .permanentHelpers>div {
+    #market-Title,
+    .permanentHelpers {
         border: 1px solid #3F2424;
-        border-radius: 20px;
+        height: 116px;
+        display: flex;
+        align-items: center;
+    }
+
+    .permanentHelpers {
+        display: flex;
+        justify-content: center;
     }
 
     .helper_1 {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .ponctualHelpers>div {
-        border: 1px solid black;
-    }
-    
 }

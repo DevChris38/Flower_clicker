@@ -37,12 +37,14 @@ const helpersProps = [
 let actScore = 0;
 let petalesPerSeconds = 0;
 
+
+
+
 // fonction qui met à jour le nombre de pétales
 function updateScore(chrono) {
     if (debut === undefined) {
         debut = chrono;
     }
-    console.log(chrono)
     const ecoule = chrono - debut;
 
     //console.log((chrono - tempsPrecedent) * petalesPerSeconds);
