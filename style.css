@@ -212,6 +212,16 @@
         flex-wrap: nowrap;
     }
 
+    #timer {
+        text-align: center;
+        padding-top: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 4vh;
+        width: 100%;
+        background-color: #fee257;
+        font-family: 'Croissant One', cursive;
+      }
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
     .progressionBar {
         background-color: #fee257;
@@ -224,6 +234,8 @@
         position: absolute;
         top: 0;
         width: 100%;
+        text-align: center;
+        height: 4vh;
     }
 
     .progressionBar p {
@@ -236,7 +248,7 @@
         display: block;
         position: relative;
         width: 60vw;
-        height: 100vh;
+        height: 92vh;
     }
 
     #imgBack {
@@ -266,6 +278,7 @@
     .gifts {
         width: 20vw;
         background-color: hsl(192, 30%, 75%);
+        height: 100vh;
     }
 
     #gift_Title {
@@ -301,6 +314,7 @@
     .market {
         width: 20vw;
         background-color: hsl(42, 96%, 80%);
+        height: 100vh;
     }
 
     #market-Title {

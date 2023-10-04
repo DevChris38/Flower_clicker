@@ -9,6 +9,8 @@ const margueritte = document.querySelector('#gift_1');
 const arrosoir = document.querySelector('.helper_1');
 const arrosoirNumber = document.querySelector('#arrosoirNumber');
 const margueritteNumber = document.querySelector('#margueriteNumber');
+const timerElement = document.getElementById("timer")
+
 
 let debut;
 let fini = false;
@@ -46,6 +48,15 @@ function updateScore(chrono) {
         debut = chrono;
     }
     const ecoule = chrono - debut;
+
+
+    let minutes = Math.floor(parseInt(chrono) / 60000);
+    let secondes = Math.floor((parseInt(chrono) % 60000)/ 1000);
+    //console.log('minutes:' + minutes)
+    //console.log('secondes:' + secondes)
+
+    timerElement.innerText = `${minutes}:${secondes}`
+
 
     //console.log((chrono - tempsPrecedent) * petalesPerSeconds);
     actScore = actScore + ((chrono - tempsPrecedent) * petalesPerSeconds / 1000);
