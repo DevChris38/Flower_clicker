@@ -11,6 +11,15 @@
     color: #3F2424;
 }
 
+h2 {
+    font-family: 'Croissant One', cursive;
+    font-style: bold;
+}
+
+.progressionBar {
+    text-align: center;
+}
+
 /*--------------------Version mobile---------------------*/
 
 @media (max-width: 768px) {
@@ -26,15 +35,10 @@
     .progressionBar {
         background-color: hsl(50, 99%, 67%);
         font-family: 'Croissant One', cursive;
-        font-style: bold;
         font-size: 1rem;
         position: absolute;
         top: 0;
         width: 100%;
-    }
-
-    .progressionBar p {
-        text-align: center;
     }
 
     .now {
@@ -93,18 +97,19 @@
 
     .menuGifts {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
     #gift_1 {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border-radius: 30px;
         border: #fee257 1px solid;
         box-shadow: 5px 5px 3px #9F9F9f;
         margin-bottom: 1vh;
+        width: 70%;
     }
 
     .textGifts {
@@ -177,12 +182,13 @@
     }
 
     .helper_1 {
-        box-shadow: 2px 2px 2px #9F9F9f;
+        box-shadow: 4px 4px 2px #9F9F9f;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 20px;
+        border: #3F2424 1px solid;
     }
 
     .itemHelper {
@@ -273,7 +279,6 @@
         align-items: center;
         justify-content: center;
         height: 116px;
-        border: 1px solid #3F2424;
     }
 
     .imgContainer,
@@ -286,6 +291,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-radius: 30px;
     }
 
     #arrowGifts_left,
@@ -311,21 +317,25 @@
 
     #market-Title,
     .permanentHelpers {
-        border: 1px solid #3F2424;
         height: 116px;
         display: flex;
         align-items: center;
     }
 
     .permanentHelpers {
-        display: flex;
+        border: 1px solid #3F2424;
         justify-content: center;
+        border-radius: 30px;
     }
 
     .helper_1 {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
 }

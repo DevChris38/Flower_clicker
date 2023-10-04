@@ -9,6 +9,11 @@ const margueritte = document.querySelector('#gift_1');
 const arrosoir = document.querySelector('.helper_1');
 const arrosoirNumber = document.querySelector('#arrosoirNumber');
 const margueritteNumber = document.querySelector('#margueriteNumber');
+const margueritteImg = document.querySelector('.imgContainer');
+const margueritteText = document.querySelector('.textGifts');
+const helperTitle = document.querySelector('.helperTitle');
+const itemHelper = document.querySelector('.itemHelper');
+
 
 let debut;
 let fini = false;
@@ -21,7 +26,7 @@ let precedentTimeStamp = 0;
 const giftsProps = [
     {
         name: 'margueritte',
-        cost: 150,
+        cost: 3,
         number: 0
     }]
 
@@ -55,15 +60,19 @@ function updateScore(chrono) {
 
     // rend l'item visible si on a asez de pétales pour l'acheter
     if (actScore < helpersProps[0].cost) {
-        arrosoir.style.backgroundColor = ('black');
+        helperTitle.style.visibility = ('hidden');
+        itemHelper.style.visibility = ('hidden');
     } else {
-        arrosoir.style.backgroundColor = ('transparent');
+        helperTitle.style.visibility = ('visible');
+        itemHelper.style.visibility = ('visible');
     }
 
     if (actScore >= giftsProps[0].cost) {
-        margueritte.style.visibility = ('visible');
+        margueritteImg.style.visibility = ('visible');
+        margueritteText.style.visibility = ('visible');
     } else {
-        margueritte.style.visibility = ('hidden');
+        margueritteImg.style.visibility = ('hidden');
+        margueritteText.style.visibility = ('hidden');
     }
 
     arrosoirNumber.innerText = `Vous avez ${helpersProps[0].number} arrosoirs`;
