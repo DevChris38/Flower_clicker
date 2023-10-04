@@ -101,7 +101,7 @@ h2 {
         align-items: center;
     }
 
-    #gift_1 {
+    .plusieursGift {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -125,7 +125,13 @@ h2 {
 
 
     #margueriteCost,
-    #margueriteWiki {
+    #margueriteWiki,
+    #tiareCost,
+    #tiareWiki,
+    #cosmosCost,
+    #cosmosWiki,
+    #tulipeCost,
+    #tulipewiki {
         font-size: 2vh;
     }
 
@@ -133,7 +139,10 @@ h2 {
         padding: 5px;
     }
 
-    #margueriteImg {
+    #margueriteImg,
+    #tiareImg,
+    #cosmosImg,
+    #tulipeImg {
         height: 10vh;
     }
 
@@ -163,7 +172,7 @@ h2 {
         background-color: hsl(42, 96%, 80%);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 2vw;
+        grid-template-rows: 0.5fr 1fr 1fr 2vw;
         column-gap: 2vw;
         padding: 0 2vw;
     }
@@ -172,16 +181,7 @@ h2 {
         grid-column: 1 / span 2;
     }
 
-    .permanentHelpers {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 3;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5%;
-        height: 35%;
-    }
-
-    .helper_1 {
+    .helper {
         box-shadow: 4px 4px 2px #9F9F9f;
         width: 100%;
         display: flex;
@@ -189,6 +189,7 @@ h2 {
         align-items: center;
         border-radius: 20px;
         border: #3F2424 1px solid;
+        margin-bottom: 2%;
     }
 
     .itemHelper {
@@ -201,8 +202,8 @@ h2 {
         font-size: 2vh;
     }
 
-    #arrosoirCost,
-    #arrosoirNumber {
+    .cost,
+    .number {
         font-size: 1.5vh;
     }
 
@@ -216,6 +217,11 @@ h2 {
     body {
         display: flex;
         flex-wrap: nowrap;
+    }
+
+
+    h2 {
+        font-size: 2rem;
     }
 
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
@@ -281,17 +287,22 @@ h2 {
         height: 116px;
     }
 
-    .imgContainer,
-    .textGifts {
-        margin: 2%;
-    }
-
-    #gift_1 {
+    .plusieursGift {
         border: 1px solid #3F2424;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 30px;
+    }
+
+    .imgContainer,
+    .textGifts {
+        margin: 2%;
+    }
+
+    .imageGift {
+        width: 50px;
+        height: 50px;
     }
 
     #arrowGifts_left,
@@ -307,6 +318,7 @@ h2 {
     .market {
         width: 20vw;
         background-color: hsl(42, 96%, 80%);
+
     }
 
     #market-Title {
@@ -315,27 +327,24 @@ h2 {
         justify-content: center;
     }
 
-    #market-Title,
-    .permanentHelpers {
+    #market-Title {
         height: 116px;
         display: flex;
         align-items: center;
     }
 
-    .permanentHelpers {
-        border: 1px solid #3F2424;
-        justify-content: center;
-        border-radius: 30px;
-    }
-
-    .helper_1 {
+    .helper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px solid #3F2424;
+        justify-content: center;
+        border-radius: 20px;
+        height: 15%;
     }
 
-    h2 {
-        font-size: 2rem;
+    .itemHelper {
+        text-align: center;
     }
 
 }
