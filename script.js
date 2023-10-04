@@ -11,8 +11,6 @@ const arrosoirNumber = document.querySelector('#arrosoirNumber');
 const margueritteNumber = document.querySelector('#margueriteNumber');
 const margueritteImg = document.querySelector('.imgContainer');
 const margueritteText = document.querySelector('.textGifts');
-const helperTitle = document.querySelector('.helperTitle');
-const itemHelper = document.querySelector('.itemHelper');
 
 
 let debut;
@@ -60,11 +58,9 @@ function updateScore(chrono) {
 
     // rend l'item visible si on a asez de pétales pour l'acheter
     if (actScore < helpersProps[0].cost) {
-        helperTitle.style.visibility = ('hidden');
-        itemHelper.style.visibility = ('hidden');
+        arrosoir.style.visibility = ('hidden');
     } else {
-        helperTitle.style.visibility = ('visible');
-        itemHelper.style.visibility = ('visible');
+        arrosoir.style.visibility = ('visible');
     }
 
     if (actScore >= giftsProps[0].cost) {
