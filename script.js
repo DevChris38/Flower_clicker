@@ -52,8 +52,6 @@ function updateScore(chrono) {
 
     let minutes = Math.floor(parseInt(chrono) / 60000);
     let secondes = Math.floor((parseInt(chrono) % 60000)/ 1000);
-    //console.log('minutes:' + minutes)
-    //console.log('secondes:' + secondes)
 
     timerElement.innerText = `${minutes}:${secondes}`
 
