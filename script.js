@@ -17,6 +17,7 @@ let lastClick = 0;
 let precedentTimeStamp = 0;
 
 
+
 // tableau d'objets pour définir les fleurs que l'on va gagner
 const giftsProps = [
     {
