@@ -11,7 +11,7 @@
 <body>
     <div class="gifts">
         <div id="gift_Title">
-
+            <h2> Gifts</h2>
         </div>
         <!--La flèche sur laquelle on clique pour passer les items vers l'arriere en version mobile-->
         <div class="menuGifts">
@@ -19,20 +19,58 @@
                 <div id="triangleButton_left"></div>
             </div>
 
-
-            <div id="gift_1">
-                <div class="imgContainer">
-                    <img id="margueriteImg" src="./assets/flowersGift/marguerite.svg" />
+            <div class="plusieursGift" id="gift_1">
+                <div class="imgContainer" id="margueriteBoxImg">
+                    <img class="imageGift" id="margueriteImg" src="./assets/flowersGift/marguerite.svg" />
                 </div>
-                <div class="textGifts">
+                <div class="textGifts" id="margueriteTextGifts">
                     <h3 class="itemTitle">Marguerite</h3>
-                    <p id="margueriteCost">Coût = 150 pétales</p>
-                    <p id="margueriteWiki"> <span> Famille:</span> Asteraceae <br /> <span>Propriétés:</span>
+                    <p id="margueriteCost">Coût : 150 pétales</p>
+                    <p id="margueriteWiki"> <span> Famille :</span> Asteraceae <br /> <span>Propriétés :</span>
                         calmantes,<br />digestives, astringente <br />
-                        <span>Particularité:</span> elle faisait partie<br />des herbes de la St Jean.
                     </p>
                 </div>
             </div>
+
+            <div class="plusieursGift" id="gift_2">
+                <div class="imgContainer" id="tiareBoxImg">
+                    <img class="imageGift" id="tiareImg" src="./assets/flowersGift/fleur-de-tiaré.svg" />
+                </div>
+                <div class="textGifts">
+                    <h3 class="itemTitle">Fleur de Tiaré</h3>
+                    <p id="tiareCost">Coût : 300 pétales</p>
+                    <p id="tiareWiki"> <span> Famille :</span> Rubiaceae <br /> <span>Propriétés :</span>
+                        calmantes,<br />antiseptique, purifiante
+                    </p>
+                </div>
+            </div>
+
+            <div class="plusieursGift" id="gift_3">
+                <div class="imgContainer" id="cosmosBoxImg">
+                    <img class="imageGift" id="cosmosImg" src="./assets/flowersGift/cosmos.svg" />
+                </div>
+                <div class="textGifts">
+                    <h3 class="itemTitle">Cosmos</h3>
+                    <p id="cosmosCost">Coût : 450 pétales</p>
+                    <p id="cosmosWiki"> <span> Famille :</span> Asteraceae <br /> <span>Propriétés :</span>
+                        antioxydant,<br />anticancéreuses, antibactériennes
+                    </p>
+                </div>
+            </div>
+
+            <div class="plusieursGift" id="gift_4">
+                <div class="imgContainer" id="tulipeBoxImg">
+                    <img class="imageGift" id="tulipeImg" src="./assets/flowersGift/tulipe.svg" />
+                </div>
+                <div class="textGifts">
+                    <h3 class="itemTitle">Tulipe</h3>
+                    <p id="tulipeCost">Coût : 600 pétales</p>
+                    <p id="tulipeWiki"> <span> Famille :</span> Liliaceae <br /> <span>Propriétés :</span>
+                        anticoagulantes,<br />antispasmodiques, digestives
+                    </p>
+                </div>
+            </div>
+
             <!--La flèche sur laquelle on clique pour passer les items vers l'avant en version mobile-->
             <div id="arrowGifts_right">
                 <div id="triangleButton_right"></div>
@@ -43,17 +81,15 @@
 
 
     <div class="garden">
-
+        <div id="timer"></div>
         <img id="imgBack" src="./assets/imgFond2.jpeg" alt="Illustration de collines herbeuses et ciel bleu" />
         <!--mettre l'event clic dans garden pour garder toute la zone "jardin clicable et avoir une zone d'apparition des fleurs plus reduite (ex que dans l'herbe)"-->
         <div class="progressionBar">
             <!--CA : J'ai mis la barre après l'image pour que la barre apparaisse par dessus l'image afin due l'image ne dépasse pas du bas de la page-->
 
-            <p>0 / 100 000 pétales</p>
+            <p id="barTitle">0 / 100 000 pétales</p>
             <div class="progressionBar now">
-                <!-- ajouter un increment lié à un event clic, J'ai fais le css en mode 0, a y revenir après ou pendant la mise en place de l'event-->
             </div>
-
         </div>
         <div class="flowerBox">
             <!--mise en place des fleurs avec la mise en place de l'event d'apparition de fleurs avec clic et aléatoire-->
@@ -72,24 +108,46 @@
             <h2>Market</h2>
         </div>
 
-        <div class="permanentHelpers">
-
-            <div class="helper_1">
-                <h3>Arrosoir</h3>
-                <div class="itemHelper">
-                    <p id="arrosoirCost">Coût = 20 pétales</p>
-
-                    <p id="arrosoirNumber">Vous n'avez pas d'arrosoir</p>
-                </div>
+        <div id="helper_1" class="helper">
+            <h3 class="helperTitle">Arrosoir</h3>
+            <div class="itemHelper">
+                <p class="cost" id="arrosoirCost">Coût : 20 pétales</p>
+                <p class="number" id="arrosoirNumber">Vous n'avez pas d'arrosoir</p>
             </div>
         </div>
+
+        <div class="helper" id="helper_2">
+            <h3 class="helperTitle">Rateau</h3>
+            <div class="itemHelper">
+                <p class="cost" id="rateauCost">Coût : 60 pétales</p>
+
+                <p class="number" id="rateauNumber">Vous n'avez pas de rateau</p>
+            </div>
+        </div>
+
+        <div class="helper" id="helper_3">
+            <h3 class="helperTitle">Pelle</h3>
+            <div class="itemHelper">
+                <p class="cost" id="pelleCost">Coût : 180 pétales</p>
+
+                <p class="number" id="pelleNumber">Vous n'avez pas de pelle</p>
+            </div>
+        </div>
+
+        <div class="helper" id="helper_4">
+            <h3 class="helperTitle">Brouette</h3>
+            <div class="itemHelper">
+                <p class="cost" id="brouetteCost">Coût : 540 pétales</p>
+
+                <p class="number" id="brouetteNumber">Vous n'avez pas de brouette</p>
+            </div>
+        </div>
+
     </div>
     <!-- CREDIT POUR L'IMAGE DE FOND
      <a href="https://fr.freepik.com/vecteurs-libre/paysage-printemps-dessine-main_6688436.htm#page=20&query=libre%20droits%20jardin&position=9&from_view=search&track=ais">Freepik</a>
 -->
-
     <script src="script.js"></script>
-
 </body>
 
 </html>

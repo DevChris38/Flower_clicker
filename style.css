@@ -11,6 +11,15 @@
     color: #3F2424;
 }
 
+h2 {
+    font-family: 'Croissant One', cursive;
+    font-style: bold;
+}
+
+.progressionBar {
+    text-align: center;
+}
+
 /*--------------------Version mobile---------------------*/
 
 @media (max-width: 768px) {
@@ -24,13 +33,25 @@
 
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
     .progressionBar {
-        background-color: hsl(50, 99%, 67%);
+        background-color: #fee257;
         font-family: 'Croissant One', cursive;
-        font-style: bold;
         font-size: 1rem;
         position: absolute;
         top: 0;
         width: 100%;
+        text-align: center;
+    }
+
+    #timer {
+        text-align: center;
+        padding-top: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 4vh;
+        width: 100%;
+        background-color: #fee257;
+        font-family: 'Croissant One', cursive;
+
     }
 
     .progressionBar p {
@@ -54,7 +75,7 @@
 
     #imgBack {
         width: 100%;
-        height: 100%;
+        height: 88%;
         display: block;
     }
 
@@ -93,18 +114,25 @@
 
     .menuGifts {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
-    #gift_1 {
+    .plusieursGift {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border-radius: 30px;
         border: #fee257 1px solid;
         box-shadow: 5px 5px 3px #9F9F9f;
         margin-bottom: 1vh;
+        width: 70%;
+    }
+
+    #gift_2,
+    #gift_3,
+    #gift_4 {
+        display: none;
     }
 
     .textGifts {
@@ -120,7 +148,13 @@
 
 
     #margueriteCost,
-    #margueriteWiki {
+    #margueriteWiki,
+    #tiareCost,
+    #tiareWiki,
+    #cosmosCost,
+    #cosmosWiki,
+    #tulipeCost,
+    #tulipewiki {
         font-size: 2vh;
     }
 
@@ -128,7 +162,10 @@
         padding: 5px;
     }
 
-    #margueriteImg {
+    #margueriteImg,
+    #tiareImg,
+    #cosmosImg,
+    #tulipeImg {
         height: 10vh;
     }
 
@@ -158,7 +195,7 @@
         background-color: hsl(42, 96%, 80%);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 1fr 1fr 2vw;
+        grid-template-rows: 0.5fr 1fr 1fr 2vw;
         column-gap: 2vw;
         padding: 0 2vw;
     }
@@ -167,22 +204,15 @@
         grid-column: 1 / span 2;
     }
 
-    .permanentHelpers {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 3;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5%;
-        height: 35%;
-    }
-
-    .helper_1 {
-        box-shadow: 2px 2px 2px #9F9F9f;
+    .helper {
+        box-shadow: 4px 4px 2px #9F9F9f;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         border-radius: 20px;
+        border: #3F2424 1px solid;
+        margin-bottom: 2%;
     }
 
     .itemHelper {
@@ -195,8 +225,8 @@
         font-size: 2vh;
     }
 
-    #arrosoirCost,
-    #arrosoirNumber {
+    .cost,
+    .number {
         font-size: 1.5vh;
     }
 
@@ -212,6 +242,11 @@
         flex-wrap: nowrap;
     }
 
+
+    h2 {
+        font-size: 2rem;
+    }
+
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
     .progressionBar {
         background-color: #fee257;
@@ -224,6 +259,19 @@
         position: absolute;
         top: 0;
         width: 100%;
+        text-align: center;
+        height: 4vh;
+    }
+
+    #timer {
+        text-align: center;
+        padding-top: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 4vh;
+        width: 100%;
+        background-color: #fee257;
+        font-family: 'Croissant One', cursive;
     }
 
     .progressionBar p {
@@ -236,7 +284,7 @@
         display: block;
         position: relative;
         width: 60vw;
-        height: 100vh;
+        height: 92vh;
     }
 
     #imgBack {
@@ -266,6 +314,7 @@
     .gifts {
         width: 20vw;
         background-color: hsl(192, 30%, 75%);
+        height: 100vh;
     }
 
     #gift_Title {
@@ -273,7 +322,14 @@
         align-items: center;
         justify-content: center;
         height: 116px;
+    }
+
+    .plusieursGift {
         border: 1px solid #3F2424;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
     }
 
     .imgContainer,
@@ -281,11 +337,9 @@
         margin: 2%;
     }
 
-    #gift_1 {
-        border: 1px solid #3F2424;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .imageGift {
+        width: 50px;
+        height: 50px;
     }
 
     #arrowGifts_left,
@@ -301,6 +355,7 @@
     .market {
         width: 20vw;
         background-color: hsl(42, 96%, 80%);
+        height: 100vh;
     }
 
     #market-Title {
@@ -309,23 +364,24 @@
         justify-content: center;
     }
 
-    #market-Title,
-    .permanentHelpers {
-        border: 1px solid #3F2424;
+    #market-Title {
         height: 116px;
         display: flex;
         align-items: center;
     }
 
-    .permanentHelpers {
-        display: flex;
-        justify-content: center;
-    }
-
-    .helper_1 {
+    .helper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px solid #3F2424;
+        justify-content: center;
+        border-radius: 20px;
+        height: 15%;
+    }
+
+    .itemHelper {
+        text-align: center;
     }
 
 }
