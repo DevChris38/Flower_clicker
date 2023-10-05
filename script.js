@@ -117,7 +117,7 @@ function updateScore(chrono) {
 
     score.textContent = `${Math.round(actScore)} pétales / 100 000`;
 
-    // condition qui attibut une valeur à la variable 'clef' pour interagir avec le switch
+    //condition qui attibut une valeur à la variable 'clef' pour interagir avec le switch
     if (actScore >= giftsProps[3].cost) {
         clefGifts = 8
     } else if (actScore >= giftsProps[2].cost) {
@@ -186,6 +186,10 @@ function updateScore(chrono) {
 
 
     arrosoirNumber.innerText = `Vous avez ${helpersProps[0].number} arrosoirs`;
+    rateauNumber.innerText = `Vous avez ${helpersProps[1].number} rateaux`;
+    pelleNumber.innerText = `Vous avez ${helpersProps[2].number} pelles`;
+    brouetteNumber.innerText = `Vous avez ${helpersProps[3].number} brouettes`;
+
 
     let barPercent = (actScore / 100000) * 100;
     progressBarNow.style.width = "10%";

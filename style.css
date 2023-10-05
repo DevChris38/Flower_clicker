@@ -33,7 +33,7 @@ h2 {
 
     /*-----------------------------COMPTEUR DE PETALES-------------------------------------*/
     .progressionBar {
-        background-color: hsl(50, 99%, 67%);
+        background-color: #fee257;
         font-family: 'Croissant One', cursive;
         font-size: 1rem;
         position: absolute;
@@ -51,6 +51,7 @@ h2 {
         width: 100%;
         background-color: #fee257;
         font-family: 'Croissant One', cursive;
+
     }
 
     .progressionBar p {
@@ -126,6 +127,12 @@ h2 {
         box-shadow: 5px 5px 3px #9F9F9f;
         margin-bottom: 1vh;
         width: 70%;
+    }
+
+    #gift_2,
+    #gift_3,
+    #gift_4 {
+        display: none;
     }
 
     .textGifts {
