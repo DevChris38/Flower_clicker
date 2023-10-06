@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-presentation.css">
+    <title>Flower clicker</title>
+</head>
+
+<body>
+    <div id="desktop">
+    <div id="banniere">
+        <h1>Bienvenue sur Flower Clicker</h1>
+
+        <h3 id="changingText">Pour commencer le tutoriel, cliquez ici !</h3>
+
+        <div id="arrow"></div>
+    </div>
+    <svg>        
+            <mask id="svgmask3">
+              <circle id="cercle1" fill="#ffffff" cx="384" cy="-950" r="1000"></circle>
+              <circle id="cercle2" fill="#ffffff" cx="384" cy="200" r="1000"></circle>       
+            </mask>
+            <image style="width:100%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FlowerClicker-desktop.png" mask="url(#svgmask3)"></image>        
+    </svg>
+
+    </div>
+
+    <div id="mobile">
+        <div id="banniere">
+            <h1>Bienvenue sur Flower Clicker</h1>
+    
+            <h3 id="changingTextMobile">Pour commencer le tutoriel, cliquez ici !</h3>
+    
+            <div id="arrow"></div>
+        </div>
+        <svg id="svgMobile">        
+                <mask id="svgmask4">
+                  <circle id="cercle1Mobile" fill="#ffffff" cx="141" cy="250" r="1000"></circle>       
+                </mask>
+                <image style="width:100%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="FlowerClicker-mobile.png" mask="url(#svgmask4)"></image>        
+        </svg>
+
+        </div>
+ 
+</body>
+
+<script src="script-presentation.js"></script>
+
+</html>
