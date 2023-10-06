@@ -1,10 +1,14 @@
 //zone de déclaration de noeuds du DOM
 
 const score = document.querySelector('.progressionBar');
+const petalePerSec = document.querySelector('#petalePerSec');
 const progressBarNow = document.querySelector('.now');
 const gifts = document.querySelector('.gifts');
 const ferme = document.querySelector('.garden');
 const helpers = document.querySelector('.market');
+const BoutonDroite = document.querySelector('#triangleButton_right');
+const BoutonGauche = document.querySelector('#triangleButton_left');
+
 
 const arrosoir = document.querySelector('#helper_1');
 const arrosoirNumber = document.querySelector('#arrosoirNumber');
@@ -42,6 +46,10 @@ let lastClick = 0;
 let precedentTimeStamp = 0;
 let chrono = 0
 let precedentTimeStampArrosoir = 0;
+let precedentTimeStampButton = 0;
+let clickGift = 1;
+
+console.log(screen.width);
 
 
 
@@ -54,17 +62,17 @@ const giftsProps = [
     },
     {
         name: 'tiare',
-        cost: 300,
-        number: 0
-    },
-    {
-        name: 'cosmos',
         cost: 450,
         number: 0
     },
     {
+        name: 'cosmos',
+        cost: 2250,
+        number: 0
+    },
+    {
         name: 'tulipe',
-        cost: 600,
+        cost: 22500,
         number: 0
     }
 ]
@@ -78,17 +86,17 @@ const helpersProps = [
     },
     {
         name: 'rateau',
-        cost: 60,
+        cost: 120,
         number: 0
     },
     {
         name: 'pelle',
-        cost: 180,
+        cost: 720,
         number: 0
     },
     {
         name: 'brouette',
-        cost: 540,
+        cost: 4320,
         number: 0
     }
 ]
@@ -109,7 +117,7 @@ function updateScore(chrono) {
     let minutes = Math.floor(parseInt(chrono) / 60000);
     let secondes = Math.floor((parseInt(chrono) % 60000) / 1000);
 
-    timerElement.innerText = `${minutes}:${secondes}`
+    timerElement.innerText = `${minutes} min ${secondes} s`
 
 
     //console.log((chrono - tempsPrecedent) * petalesPerSeconds);
@@ -118,13 +126,13 @@ function updateScore(chrono) {
     score.textContent = `${Math.round(actScore)} pétales / 100 000`;
 
     //condition qui attibut une valeur à la variable 'clef' pour interagir avec le switch
-    if (actScore >= giftsProps[3].cost) {
+    if (actScore >= giftsProps[3].cost || giftsProps[3].number === 1) {
         clefGifts = 8
-    } else if (actScore >= giftsProps[2].cost) {
+    } else if (actScore >= giftsProps[2].cost || giftsProps[2].number === 1) {
         clefGifts = 7
-    } else if (actScore >= giftsProps[1].cost) {
+    } else if (actScore >= giftsProps[1].cost || giftsProps[1].number === 1) {
         clefGifts = 6
-    } else if (actScore >= giftsProps[0].cost) {
+    } else if (actScore >= giftsProps[0].cost || giftsProps[0].number === 1) {
         clefGifts = 5
     } else {
         clefGifts = 0
@@ -144,16 +152,15 @@ function updateScore(chrono) {
 
     // switch qui permet de rendre visible les items en fonction du score actuel
     // switch pour les helpers
+
+
     switch (clefHelpers) {
         case 4:
             brouette.style.visibility = ('visible');
-            console.log('2');
         case 3:
             pelle.style.visibility = ('visible');
-            console.log('2');
         case 2:
             rateau.style.visibility = ('visible');
-            console.log('2');
         case 1:
             arrosoir.style.visibility = ('visible');
             break;
@@ -164,16 +171,15 @@ function updateScore(chrono) {
             brouette.style.visibility = ('hidden');
     }
 
+    if(screen.width > 768){
+
     switch (clefGifts) {
         case 8:
             tulipe.style.visibility = ('visible');
-            console.log('2');
         case 7:
             cosmos.style.visibility = ('visible');
-            console.log('2');
         case 6:
             tiare.style.visibility = ('visible');
-            console.log('2');
         case 5:
             margueritte.style.visibility = ('visible');
             break;
@@ -183,7 +189,61 @@ function updateScore(chrono) {
             cosmos.style.visibility = ('hidden');
             tulipe.style.visibility = ('hidden');
     }
+}
 
+
+    // bouton de changement de Gift - Droit
+    BoutonDroite.addEventListener("click", (event) => {
+        event.preventDefault();
+        if ((clickGift >= 1 && clickGift < 4) && (event.timeStamp != precedentTimeStampButton) ){
+            clickGift ++;
+        }
+        precedentTimeStampButton = event.timeStamp;
+    });
+
+    // bouton de changement de Gift - Gauche
+    BoutonGauche.addEventListener("click", (event) => {
+        event.preventDefault();
+        if ((clickGift > 1 && clickGift <= 4) && (event.timeStamp != precedentTimeStampButton) ){
+            clickGift --;
+        }
+        precedentTimeStampButton = event.timeStamp;
+    });
+
+    console.log(clickGift);
+
+    if(screen.width <= 768){
+
+    switch (clickGift) {
+        case 1:
+            margueritte.style.display = ('flex');
+            tiare.style.display = ('none');
+            cosmos.style.display = ('none');
+            tulipe.style.display = ('none');
+            break;          
+
+        case 2:
+            margueritte.style.display = ('none');
+            tiare.style.display = ('flex');
+            cosmos.style.display = ('none');
+            tulipe.style.display = ('none');
+            break;
+
+        case 3:
+            margueritte.style.display = ('none');
+            tiare.style.display = ('none');
+            cosmos.style.display = ('flex');
+            tulipe.style.display = ('none');
+            break;          
+              
+        case 4:
+            margueritte.style.display = ('none');
+            tiare.style.display = ('none');
+            cosmos.style.display = ('none');
+            tulipe.style.display = ('flex');
+            break;
+    }
+    }
 
     arrosoirNumber.innerText = `Vous avez ${helpersProps[0].number} arrosoirs`;
     rateauNumber.innerText = `Vous avez ${helpersProps[1].number} rateaux`;
@@ -191,9 +251,9 @@ function updateScore(chrono) {
     brouetteNumber.innerText = `Vous avez ${helpersProps[3].number} brouettes`;
 
 
-    let barPercent = (actScore / 100000) * 100;
+    /*let barPercent = (actScore / 100000) * 100;
     progressBarNow.style.width = "10%";
-    //console.log(progressBarNow.style.width);
+    console.log(progressBarNow.style.width);*/
 
     if (actScore >= 100000) {
         fini = true;
@@ -211,7 +271,6 @@ function updateScore(chrono) {
             console.log(`last clic : ${lastClick} et chrono : ${chrono}`)
             addScore(1);
             lastClick = chrono;
-            console.log("clic");
             precedentTimeStamp = event.timeStamp;
         }
     });
@@ -231,11 +290,11 @@ function updateScore(chrono) {
 
     rateau.addEventListener("click", (event) => {
         event.preventDefault();
-        if (actScore >= helpersProps[1].cost && lastClick < (chrono - 500)) {
+        if (actScore >= helpersProps[1].cost && event.timeStamp != precedentTimeStampArrosoir) {
             actScore -= helpersProps[1].cost;
             helpersProps[1].number++;
-            petalesPerSeconds++;
-            lastClick = chrono;
+            petalesPerSeconds += 7;
+            precedentTimeStampArrosoir = event.timeStamp;
         }
 
     }
@@ -243,21 +302,21 @@ function updateScore(chrono) {
 
     pelle.addEventListener("click", (event) => {
         event.preventDefault();
-        if (actScore >= helpersProps[2].cost && lastClick < (chrono - 500)) {
+        if (actScore >= helpersProps[2].cost && event.timeStamp != precedentTimeStampArrosoir) {
             actScore -= helpersProps[2].cost;
             helpersProps[2].number++;
-            petalesPerSeconds++;
-            lastClick = chrono;
+            petalesPerSeconds += 49;
+            precedentTimeStampArrosoir = event.timeStamp;
         }
 
     })
     brouette.addEventListener("click", (event) => {
         event.preventDefault();
-        if (actScore >= helpersProps[3].cost && lastClick < (chrono - 500)) {
+        if (actScore >= helpersProps[3].cost && event.timeStamp != precedentTimeStampArrosoir) {
             actScore -= helpersProps[3].cost;
             helpersProps[3].number++;
-            petalesPerSeconds++;
-            lastClick = chrono;
+            petalesPerSeconds += 343;
+            precedentTimeStampArrosoir = event.timeStamp;
         }
 
     }
@@ -272,7 +331,8 @@ function updateScore(chrono) {
             && giftsProps[0].number === 0) {
             actScore -= giftsProps[0].cost;
             giftsProps[0].number = 1;
-            petalesPerSeconds++;
+            margueritte.querySelector("h3").style = "font-weight: bold";
+            petalesPerSeconds *= 1.01;
         }
     })
     tiare.addEventListener("click", (event) => {
@@ -281,7 +341,8 @@ function updateScore(chrono) {
             && giftsProps[1].number === 0) {
             actScore -= giftsProps[1].cost;
             giftsProps[1].number = 1;
-            petalesPerSeconds++;
+            tiare.querySelector("h3").style = "font-weight: bold";
+            petalesPerSeconds *= 1.05;
         }
     })
     cosmos.addEventListener("click", (event) => {
@@ -290,7 +351,8 @@ function updateScore(chrono) {
             && giftsProps[2].number === 0) {
             actScore -= giftsProps[2].cost;
             giftsProps[2].number = 1;
-            petalesPerSeconds++;
+            cosmos.querySelector("h3").style = "font-weight: bold";
+            petalesPerSeconds *= 1.1;
         }
     })
     tulipe.addEventListener("click", (event) => {
@@ -299,7 +361,8 @@ function updateScore(chrono) {
             && giftsProps[3].number === 0) {
             actScore -= giftsProps[3].cost;
             giftsProps[3].number = 1;
-            petalesPerSeconds++;
+            tulipe.querySelector("h3").style = "font-weight: bold";
+            petalesPerSeconds *= 1.5;
         }
     })
 
